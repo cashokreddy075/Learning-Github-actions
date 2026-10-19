@@ -16,3 +16,17 @@ jobs:
       - name: Checking OS release for GitHub-hosted runner
         run: cat /etc/os-release
 
+      - name: Calling Sleep
+        run: sleep 20
+
+  job2:
+    name: JOB2
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checking the Hostname for Runner
+        run: hostname 
+      - name: Running Multiple Commands
+        run: |
+          echo "Hi ashok"
+          echo "current time is 'date'"
+          sleep 20
