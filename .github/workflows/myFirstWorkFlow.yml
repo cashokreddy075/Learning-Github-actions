@@ -1,3 +1,13 @@
 name: my-first-worflow
 # to get trigger on every push on this repo in any branch
 on: push
+
+jobs:
+  job1:
+    name: JOB1
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Running Singke Command in job1
+        run: echo "Hi this is my first Github workflow"
+      - name: Checking os release for github hosted runner
+        run: cat/ etc/os-release
