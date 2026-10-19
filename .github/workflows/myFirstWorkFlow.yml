@@ -1,0 +1,3 @@
+name: my-first-worflow
+# to get trigger on every push on this repo in any branch
+on: push
