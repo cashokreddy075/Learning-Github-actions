@@ -11,46 +11,15 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - name: Running Single Command in Job1
-        run: echo "Hi, this is my first GitHub workflow"
-
-      - name: Checking OS Release for GitHub-hosted Runner
-        run: cat /etc/os-release
-
-      - name: Calling Sleep
-        run: sleep 20
-
-  job2:
-    name: JOB2
-    runs-on: ubuntu-22.04
-
-    steps:
-      - name: Checking the Hostname for Runner
-        run: hostname
-
-      - name: Running Multiple Commands
+      - name: step-1
         run: |
-          echo "Hi Ashok"
-          echo "Current time is $(date)"
-          sleep 20
-
-  job3:
-    name: JOB3
-    runs-on: ubuntu-22.04
-    needs: job1
-
-    steps:
-      - name: Job with Single Dependency
-        run: sleep 10
-
-  job4:
-    name: JOB4
-    runs-on: ubuntu-22.04
-    needs:
-      - job1
-      - job2
-      - job3
-
-    steps:
-      - name: Job for Multiple Dependencies
-        run: sleep 10
+          pwd 
+          ls -ltr
+          hostname
+      - name: step-2 Checkout repository
+        uses: actions/checkout@v4 
+      - name: step-3
+        run: |
+          pwd 
+          ls -ltr
+          hostname
