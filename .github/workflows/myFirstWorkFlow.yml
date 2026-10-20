@@ -3,8 +3,7 @@ name: my-first-workflow
 # Trigger workflow on every push
 on:
   schedule:
-    - cron: "*/1 * * * *" # Runs at midnight every day
-
+    - cron: "*/1 * * * *"  # Runs every minute
 jobs:
   job1:
     name: JOB1
