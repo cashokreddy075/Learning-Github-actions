@@ -2,7 +2,8 @@ name: my-first-workflow
 
 # Trigger workflow on every push
 on:
-  push:
+  shedule:
+    - cron: '"/1 * * *"" # Runs at midnight every day
 
 jobs:
   job1:
