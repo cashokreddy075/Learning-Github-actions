@@ -4,7 +4,10 @@ name: my-first-workflow
 # Trigger workflow every 5 minutes, manually, or on every push
 on:
   push:
-
+    branches: 
+      - dev
+      - 'feaure-*'
+      - main
 jobs:
   job1:
     name: JOB1
